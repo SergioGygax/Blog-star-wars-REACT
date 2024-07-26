@@ -40,7 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data => setStore({"planetas":data.results}))
 			},
 			traerNaves: () => {
-				fetch("https://www.swapi.tech/api/starships/")
+				fetch("https://www.swapi.tech/api/vehicles/")
 				.then(resp => resp.json())
 				.then(data => setStore({"naves":data.results}))
 			},

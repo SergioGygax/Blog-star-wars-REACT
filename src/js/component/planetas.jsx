@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { Context } from "../store/appContext";
-
+import { useNavigate } from 'react-router';
 
 const Planetas = () => {
 
     const { store, actions } = useContext(Context);
+    const navigate = useNavigate()
 
     return (
       <div className='container row align-items-center'>
@@ -16,13 +17,12 @@ const Planetas = () => {
                               <h5 className="card-title">{planeta.name}</h5>
                               <p className="card-text">
                                   {planeta.rotation_period}
-                                  {planeta.mass}
-                                  {planeta.hair_color}
+                                  
                                   
 
                               </p>
                               <div className='d-flex'>
-                                  <a href="#" className="btn btn-primary">Go somewhere</a>
+                              <button onClick={()=>navigate(`/${planeta.uid}`)} className="btn btn-primary">Ver planetas</button>
                                   <button>Fav</button>
                               </div>
                           </div>

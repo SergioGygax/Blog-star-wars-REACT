@@ -11,7 +11,7 @@ export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	
-	console.log("NAVES", store.naves)
+	
 	
 	
 	return (
@@ -20,4 +20,6 @@ export const Home = () => {
 		<Planetas/>
 		<Naves/>
 	</div>
+
+	
 )};
